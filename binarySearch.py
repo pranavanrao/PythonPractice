@@ -30,4 +30,4 @@ result = binarySearch(a, 0, size-1, x)
 if result == -1 :
     print("The item entered is not in the array")
 else :
-    print("The item is present in the index ", result+1)
+    print("The item is present in the index ", result)
