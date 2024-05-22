@@ -1,14 +1,10 @@
-def swapItems(a, i, j) :
-    temp = a[i]
-    a[i] = a[j]
-    a[j] = temp
-
 def selectionSort(a, size) :
-    for i in range(size) :
+    for i in range(size-1) :
+        min = i
         for j in range(i+1, size) :
-            if (a[j] < a[i]) :
-                swapItems(a, i, j)
-        print(a[i], end=" ")
+            if (a[j] < a[min]) :
+                min = j
+        a[i], a[min] = a[min], a[i]
 
 size = int(input("Enter the size of an array : "))
 
@@ -25,3 +21,6 @@ for i in range(size) :
 print("\nThe sorted array :")
 
 selectionSort(a,size)
+
+for i in range(size) :
+    print(a[i], end=" ")
